@@ -1,0 +1,129 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@200;300;400;500;700&display=swap');
+
+:root {
+   --gradient: linear-gradient(90deg,#4675C0,#8FC8EB);
+  --white-text: #fff;
+  --background: #FAF4F4;
+  --border-radius: .8rem;
+  --box-shadow: 0 .5rem 1.5rem rgba(0,0,0,.1);
+}
+
+* {
+  font-family: 'Nunito', sans-serif;
+  margin: 0; padding: 0;
+  box-sizing: border-box;
+  outline: none; border: none;
+  text-transform: capitalize;
+}
+
+html {
+  font-size: 65.5%;
+  scroll-behavior: smooth;
+  overflow-x: hidden;
+}
+
+html::-webkit-scrollbar{
+    width: 1rem;
+}
+
+html::-webkit-scrollbar-track{
+    background: var(--white-text);
+}
+
+html::-webkit-scrollbar-thumb{
+    background: var(--gradient);
+    border-radius: 5rem;
+}
+
+body{
+  background: var(--gradient);
+}
+
+section {
+  padding: 2rem 9%;
+}
+
+.title {
+  color: var(--white-text);
+  font-size: 4.5rem;
+  font-weight: bold;
+  margin-bottom: 1.5rem;
+  text-align: center;
+}
+
+.box-container {
+     display: grid;
+     grid-template-columns: repeat(auto-fit,minmax(28rem,1fr));
+     gap: 3rem;
+}
+
+.box-container .box {
+  flex: 1 1 48rem;
+  background: var(--background);
+  border-radius: var(--border-radius);
+  text-align: center;
+}
+
+.box-container .box h3 {
+  color: transparent;
+  font-size: 3.5rem;
+  font-weight: bolder;
+  background: var(--gradient);
+  background-clip: text;
+  -webkit-background-clip: text;
+  padding: 1.5rem 0;
+}
+
+.box-container .box .amount {
+    color: var(--white-text);
+     font-size: 2.5rem;
+     font-weight: bold;
+     background: var(--gradient);
+     padding: 1rem 0;
+}
+
+.box-container .box .amount span {
+  font-size: 1.8rem;
+}
+
+.box-container .box ul {
+  list-style: none;
+}
+
+.box-container .box ul li {
+  color: #538DBD;
+  font-size: 1.5rem;
+  font-weight: bold;
+  padding: 1.5rem 0;
+}
+
+.box-container .box .btn {
+    color: var(--white-text);
+    font-size: 1.5rem;
+    background: var(--gradient);
+    padding: .8rem 3rem;
+    border-radius: var(--border-radius);
+    box-shadow: var(--box-shadow);
+    margin: 1rem 1.5rem;
+    display: inline-block;
+    z-index: 0;
+    overflow: hidden;
+    position: relative;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+@media (max-width: 768px){
+  
+  html{
+    font-size: 65%;
+  }
+  
+}
+
+@media (max-width: 450px) {
+
+    html {
+        font-size: 50%;
+    }
+}
